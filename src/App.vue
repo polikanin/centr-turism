@@ -1629,6 +1629,21 @@ function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value
 }
 
+function copyToClipboard(html) {
+    const container = document.createElement('div');
+    container.innerHTML = html;
+
+    const plainText = container.innerText.trim();
+
+    navigator.clipboard.writeText(plainText)
+        .then(() => {
+            console.log('Получилось!')
+        })
+        .catch(err => {
+            console.log('Something went wrong', err);
+        });
+}
+
 function trackScrollActiveLinks() {
     const container = document.querySelector('#content');
     const articles = document.querySelectorAll('.ct-article');
@@ -1680,6 +1695,7 @@ onMounted(function (){
         <div class="ct-content px-4" id="content">
             <template v-for="tour in tours" :key="tour.id">
                 <div class="ct-article pt-4 pb-4" :id="tour.id">
+                    <button type="button" class="btn btn-success mb-2" @click.prevent="copyToClipboard(tour.content)">Скопировать</button>
                     <article v-html="tour.content">
 
                     </article>
