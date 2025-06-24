@@ -1629,9 +1629,9 @@ function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value
 }
 
-function copyToClipboard(html) {
+function copyToClipboard(html, html2) {
     const container = document.createElement('div');
-    container.innerHTML = html;
+    container.innerHTML = html + '<h4>--- Памятка ---</h4>' + html2;
 
     const plainText = container.innerText.trim();
 
@@ -1695,7 +1695,7 @@ onMounted(function (){
         <div class="ct-content px-4" id="content">
             <template v-for="tour in tours" :key="tour.id">
                 <div class="ct-article pt-4 pb-4" :id="tour.id">
-                    <button type="button" class="btn btn-success mb-2" @click.prevent="copyToClipboard(tour.content)">Скопировать</button>
+                    <button type="button" class="btn btn-success mb-2" @click.prevent="copyToClipboard(tour.content, tour.quote)">Скопировать</button>
                     <article v-html="tour.content">
 
                     </article>
