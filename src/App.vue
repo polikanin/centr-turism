@@ -74,10 +74,6 @@ const tours = reactive([
         gallery: [
             {
                 type: 'image',
-                src: '/assets/dalat/1.webp'
-            },
-            {
-                type: 'image',
                 src: 'assets/dalat/2.jpg'
             },
             {
@@ -212,10 +208,6 @@ const tours = reactive([
 
         `,
         gallery: [
-            {
-                type: 'image',
-                src: '/assets/dalat/1.webp'
-            },
             {
                 type: 'image',
                 src: 'assets/dalat/2.jpg'
@@ -357,10 +349,6 @@ const tours = reactive([
 
         `,
         gallery: [
-            {
-                type: 'image',
-                src: '/assets/dalat/1.webp'
-            },
             {
                 type: 'image',
                 src: 'assets/dalat/2.jpg'
@@ -1020,10 +1008,7 @@ const tours = reactive([
 
         `,
         gallery: [
-            {
-                type: 'video',
-                src: 'assets/seaadv/video.mp4'
-            },
+
         ],
     },
     {
@@ -1224,10 +1209,6 @@ const tours = reactive([
 
         `,
         gallery: [
-            {
-                type: 'image',
-                src: '/assets/dalat/1.webp'
-            },
             {
                 type: 'image',
                 src: 'assets/dalat/2.jpg'
