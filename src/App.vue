@@ -1606,6 +1606,7 @@ const isMenuOpen = ref(false)
 function goTo(id, containerSelector = null) {
     const element = document.getElementById(id);
     if (!element) return;
+    closeMenu()
 
     const container = document.querySelector('#content');
     if (container && container.contains(element)) {
